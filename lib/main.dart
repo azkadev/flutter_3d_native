@@ -41,9 +41,30 @@ class _MyAppState extends State<MyApp> {
                     figures: [
                       ...kursi(positionOne: 0, potitionThree: 0),
                       ...kursi(positionOne: 0, potitionThree: 50),
-                      ...kursi(positionOne: 50),
+                      ...kursi(positionOne: 50, potitionThree: 0),
+                      ...kursi(positionOne: 50, potitionThree: 50),
                       ...kursi(positionOne: 100, potitionThree: 0),
                       ...kursi(positionOne: 100, potitionThree: 50),
+                      ...kursi(positionOne: 150, potitionThree: 0),
+                      ...kursi(positionOne: 150, potitionThree: 50),
+                      ...kursi(positionOne: 200, potitionThree: 0),
+                      ...kursi(positionOne: 200, potitionThree: 50),
+
+                      ...kursi(positionOne: 0, potitionThree: 100),
+                      ...kursi(positionOne: 0, potitionThree: 150),
+
+                      ...kursi(positionOne: 0, potitionThree: 200),
+                      ...kursi(positionOne: 0, potitionThree: 250),
+
+                      ...kursi(positionOne: 0, potitionThree: 300),
+                      ...kursi(positionOne: 0, potitionThree: 350),
+                      ...kursi(positionOne: 50, potitionThree: 300),
+                      ...kursi(positionOne: 50, potitionThree: 350),
+                      ...kursi(positionOne: 100, potitionThree: 300),
+                      ...kursi(positionOne: 100, potitionThree: 350),
+                      ...kursi(positionOne: 150, potitionThree: 300),
+                      ...kursi(positionOne: 150, potitionThree: 350),
+
 
                       /// meja
                     ],
@@ -101,7 +122,7 @@ kursi({
       length: 25,
       potitionOne: positionOne + 20,
       potitionTwo: potitionTwo,
-      potitionThree: potitionThree +20,
+      potitionThree: potitionThree + 20,
       increasesData: ["two"],
     ),
     ...makeObject(
@@ -128,7 +149,7 @@ kursi({
     ...makeObject(
       length: 10,
       potitionOne: positionOne,
-      potitionTwo:potitionTwo +  12,
+      potitionTwo: potitionTwo + 12,
       potitionThree: potitionThree,
       increasesData: ["one"],
     ),
@@ -151,8 +172,8 @@ kursi({
     ...makeObject(
       length: 11,
       potitionOne: positionOne,
-      potitionTwo:potitionTwo +  20,
-      potitionThree: potitionThree +2,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree + 2,
       increasesData: [
         "one",
       ],
@@ -170,16 +191,7 @@ kursi({
       length: 11,
       potitionOne: positionOne,
       potitionTwo: potitionTwo + 20,
-      potitionThree:potitionThree + 6,
-      increasesData: [
-        "one",
-      ],
-    ),
-    ...makeObject(
-      length: 11,
-      potitionOne: positionOne,
-      potitionTwo:potitionTwo +  20,
-      potitionThree:potitionThree + 8,
+      potitionThree: potitionThree + 6,
       increasesData: [
         "one",
       ],
@@ -188,7 +200,7 @@ kursi({
       length: 11,
       potitionOne: positionOne,
       potitionTwo: potitionTwo + 20,
-      potitionThree:potitionThree + 10,
+      potitionThree: potitionThree + 8,
       increasesData: [
         "one",
       ],
@@ -197,7 +209,16 @@ kursi({
       length: 11,
       potitionOne: positionOne,
       potitionTwo: potitionTwo + 20,
-      potitionThree:potitionThree+ 12,
+      potitionThree: potitionThree + 10,
+      increasesData: [
+        "one",
+      ],
+    ),
+    ...makeObject(
+      length: 11,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree + 12,
       increasesData: [
         "one",
       ],
@@ -223,7 +244,7 @@ kursi({
     ...makeObject(
       length: 11,
       potitionOne: positionOne,
-      potitionTwo:potitionTwo +  20,
+      potitionTwo: potitionTwo + 20,
       potitionThree: potitionThree + 18,
       increasesData: [
         "one",
