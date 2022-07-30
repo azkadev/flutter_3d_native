@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
   State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> { 
+class _MyAppState extends State<MyApp> {
   final _controller = DiTreDiController(
     rotationX: -20,
     rotationY: 30,
@@ -39,9 +39,12 @@ class _MyAppState extends State<MyApp> {
                   controller: _controller,
                   child: DiTreDi(
                     figures: [
-                      ...kursi(positionOne: 0),
+                      ...kursi(positionOne: 0, potitionThree: 0),
+                      ...kursi(positionOne: 0, potitionThree: 50),
                       ...kursi(positionOne: 50),
-                      ...kursi(positionOne: 100),
+                      ...kursi(positionOne: 100, potitionThree: 0),
+                      ...kursi(positionOne: 100, potitionThree: 50),
+
                       /// meja
                     ],
                     controller: _controller,
@@ -58,7 +61,8 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
-} 
+}
+
 makeObject({
   required int length,
   double size = 2,
@@ -86,228 +90,231 @@ makeObject({
   }
   return datas;
 }
- 
 
-kursi({ double positionOne = 0 }) {
+kursi({
+  double positionOne = 0,
+  double potitionTwo = 0,
+  double potitionThree = 0,
+}) {
   return [
     ...makeObject(
       length: 25,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 0,
-      potitionThree: 20,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo,
+      potitionThree: potitionThree +20,
       increasesData: ["two"],
     ),
     ...makeObject(
       length: 25,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 0,
-      potitionThree: 0,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo,
+      potitionThree: potitionThree,
       increasesData: ["two"],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne ,
-      potitionTwo: 0,
-      potitionThree: 20,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo,
+      potitionThree: potitionThree + 20,
       increasesData: ["two"],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne ,
-      potitionTwo: 0,
-      potitionThree: 0,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo,
+      potitionThree: potitionThree,
       increasesData: ["two"],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne ,
-      potitionTwo: 12,
-      potitionThree: 0,
+      potitionOne: positionOne,
+      potitionTwo:potitionTwo +  12,
+      potitionThree: potitionThree,
       increasesData: ["one"],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne ,
-      potitionTwo: 12,
-      potitionThree: 20,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 12,
+      potitionThree: potitionThree + 20,
       increasesData: ["one"],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 0,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 2,
+      potitionOne: positionOne,
+      potitionTwo:potitionTwo +  20,
+      potitionThree: potitionThree +2,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 4,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree + 4,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 6,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree:potitionThree + 6,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 8,
+      potitionOne: positionOne,
+      potitionTwo:potitionTwo +  20,
+      potitionThree:potitionThree + 8,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 10,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree:potitionThree + 10,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 12,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree:potitionThree+ 12,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 14,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree + 14,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 16,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree + 16,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 18,
+      potitionOne: positionOne,
+      potitionTwo:potitionTwo +  20,
+      potitionThree: potitionThree + 18,
       increasesData: [
         "one",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 25,
-      potitionThree: 0,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 25,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 38,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 38,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 40,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 40,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 42,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 42,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 44,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 44,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 46,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 46,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 48,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 48,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne  + 20,
-      potitionTwo: 14,
-      potitionThree: 00,
+      potitionOne: positionOne + 20,
+      potitionTwo: potitionTwo + 14,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 10,
-      potitionOne: positionOne ,
-      potitionTwo: 14,
-      potitionThree: 0,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 14,
+      potitionThree: potitionThree,
       increasesData: [
         "three",
       ],
     ),
     ...makeObject(
       length: 11,
-      potitionOne: positionOne ,
-      potitionTwo: 20,
-      potitionThree: 20,
+      potitionOne: positionOne,
+      potitionTwo: potitionTwo + 20,
+      potitionThree: potitionThree + 20,
       increasesData: [
         "one",
       ],
